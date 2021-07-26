@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+<title>{% block title %}BlogPost{% endblock title %}</title>
+{% block body %}
+    <h1>{{blug.title}}</h1>
+    <div class= 'container'>
+      {{blog.content|safe}}
+    </div>
+{% endblock body %}

@@ -1,0 +1,35 @@
+#contact-box input,
+#contact-box textarea{
+        width: 60%;
+        padding: 0.5rem;
+        border-radius: 9px;
+        font-size: 1.1rem;
+        }
+        #contact-box form{
+            width: 65%;
+            margin-left:500px;
+        }
+        #contact-box label{
+            font-size: 1.3rem;
+            font-family: sans-serif;
+            font-weight: 600;
+        }
+        #submit{
+            background-color: rgb(39, 138, 133);
+            color: white;
+            height: 45px;
+            width: 120px;
+            border-radius: 10px;
+            margin-bottom: 3px;
+            font-size: 25px;
+            padding-top: 2px;
+    }
+h1{
+    color: red;
+}    
+.h-primary1{
+    color: red;
+}
+body{
+    background-color: red;
+}

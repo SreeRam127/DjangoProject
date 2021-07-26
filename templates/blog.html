@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block blogActive %}{% endblock blogActive %}
+<title>{% block title %}Blog{% endblock title %}</title>
+{% block body %}
+<div class = 'container my-4'>
+    {% for blogq in blogs %}
+   <div class="media">
+  <div class="media-body">
+    <h5 class="my-3 text-dark"> <a href='/blogpost/{{blogq.slug}}' class = 'text-dark'>{{blogq.title}}</a></h5>
+    {{blog.content|slice:20|safe}}
+  </div>
+  <a href='/blogpost/{{blogq.slug}}' class = 'text-dark'><button type="button" class="btn btn-success mt-2">Know more</button></a>
+</div>
+    {% endfor %}
+    </div>
+    <div class='container'>
+  {% if prev %}
+  <button class="btn btn-primary me-md-2" type="button"><a class="text-light" href='/blog?page={{prev}}'>&laquo; prev</a></button>
+
+  {% else %}
+   <button class="btn btn-primary me-md-2 disabled " type="button"><a class="text-light"href='#'>&laquo; prev</a></button>
+  {% endif %}
+
+  {% if nxt %}
+  <button class="btn btn-primary me-md-2" type="button"><a class="text-light" href='/blog?page={{nxt}}'>&raquo; next</a></button>
+  {% else %}
+   <button class="btn btn-primary me-md-2 disabled " type="button"><a class="text-light"  href='#'>&raquo; next</a></button>
+  {% endif %}
+    </div>
+{% endblock body %}
